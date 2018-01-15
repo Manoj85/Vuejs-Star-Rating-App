@@ -18,7 +18,20 @@
 
   export default {
     components: { Icon },
-    props: ['grade', 'maxStars', 'hasCounter'],
+    props: {
+      grade: {
+        type: Number,
+        required: true
+      },
+      maxStars: {
+        type: Number,
+        default: 5
+      },
+      hasCounter: {
+        type: Boolean,
+        default: true
+      }
+    },
     data() {
       return {
         stars: this.grade
