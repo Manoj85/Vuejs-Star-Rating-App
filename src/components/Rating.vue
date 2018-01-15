@@ -18,16 +18,17 @@
 
   export default {
     components: { Icon },
+    props: ['grade', 'maxStars', 'hasCounter'],
     data() {
       return {
-        stars: 3,
-        maxStars: 5,
-        showCounter: true
+        stars: this.grade
       }
     },
     methods: {
       rate(star) {
-        this.stars = this.stars === star ? star - 1 : star
+        if (typeof star === 'number' && star <= this.maxStars && star >= 0) {
+          this.stars = this.stars === star ? star - 1 : star
+        }
       }
     }
   }
