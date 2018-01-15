@@ -27,7 +27,7 @@
         type: Number,
         default: 5
       },
-      hasCounter: {
+      showCounter: {
         type: Boolean,
         default: true
       }
