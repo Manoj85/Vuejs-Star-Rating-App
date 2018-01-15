@@ -27,7 +27,7 @@
     },
     methods: {
       rate(star) {
-        this.stars = star
+        this.stars = this.stars === star ? star - 1 : star
       }
     }
   }
