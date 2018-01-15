@@ -3,11 +3,12 @@
     <ul class="list">
       <li v-for="star in maxStars"
           :class="{'active': star <= stars }"
+          @click="rate(star)"
           class="star">
         <icon :name="star <= stars ? 'star' : 'star-o'"/>
       </li>
     </ul>
-    <span>{{ stars }} of {{ maxStars }}</span>
+    <span v-if="showCounter">{{ stars }} of {{ maxStars }}</span>
   </div>
 </template>
 <script>
@@ -20,7 +21,13 @@
     data() {
       return {
         stars: 3,
-        maxStars: 5
+        maxStars: 5,
+        showCounter: true
+      }
+    },
+    methods: {
+      rate(star) {
+        this.stars = star
       }
     }
   }
