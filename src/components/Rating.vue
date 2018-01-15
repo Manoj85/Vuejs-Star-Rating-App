@@ -7,7 +7,7 @@
         <icon :name="star <= stars ? 'star' : 'star-o'"/>
       </li>
     </ul>
-    <span>3 of 5</span>
+    <span>{{ stars }} of {{ maxStars }}</span>
   </div>
 </template>
 <script>
