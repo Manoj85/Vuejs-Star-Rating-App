@@ -96,6 +96,9 @@
 </template>
 
 <script>
+  import { TweenMax, TimelineMax } from "gsap";
+  import SplitText from '../lib/SplitText.min.js';
+
   export default {
     name: "book-content-typer",
     data() {
