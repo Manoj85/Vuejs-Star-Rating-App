@@ -3,6 +3,8 @@ import Rating from './components/Rating'
 import BookBasic from './components/BookBasic'
 import BookContentTyper from './components/BookContentTyper'
 import CheckedValues from './components/CheckedValues'
+import VIfElse from './components/VIfElse'
+import VBind from './components/VBind'
 
 new Vue({
   el: '#app',
@@ -18,11 +20,20 @@ new Vue({
       
       <CheckedValues />
       <hr/>
+      
+      <VIfElse />
+      <hr/>
+      
+      <VBind />
+      <hr/>
+      
   </div>`,
   components: {
     Rating,
     BookBasic,
     BookContentTyper,
-    CheckedValues
+    CheckedValues,
+    VIfElse,
+    VBind
   }
 })
